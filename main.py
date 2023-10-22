@@ -1,4 +1,3 @@
-# Import necessary libraries
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
@@ -17,7 +16,6 @@ app = dash.Dash(__name__)
 
 # Layout of the app
 app.layout = html.Div([
-    # Two columns for Headers and Upload Components
     html.Div([
         # First column (XLS Upload Component)
         html.Div([
@@ -69,10 +67,7 @@ app.layout = html.Div([
     
     # Two columns for displaying XLS and CSV contents
     html.Div([
-        # First column for XLS contents
         html.Div(id='output-data-upload', style={'width': '48%', 'display': 'inline-block'}),
-        
-        # Second column for CSV contents
         html.Div(id='output-csv-upload', style={'width': '48%', 'display': 'inline-block'})
     ], style={"display": "flex", "justify-content": "space-between", "marginTop": "50px"})
 ], style={'margin': '20px'})
